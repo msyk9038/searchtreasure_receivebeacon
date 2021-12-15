@@ -1,3 +1,6 @@
+input.onButtonPressed(Button.AB, function () {
+    radio.sendString("bell")
+})
 radio.onReceivedString(function (receivedString) {
     signal = radio.receivedPacket(RadioPacketProperty.SignalStrength)
     led.plotBarGraph(
