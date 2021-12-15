@@ -1,1 +1,139 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id=",fvi:Q%yO:k@~(1(x#^A">signal</variable></variables><block type="pxt-on-start" id="wE?SJ.h:W,a;M+=DghgD" x="0" y="0"><statement name="HANDLER"><block type="radio_set_group" id="%$yqj-P%(LCDbE.!O.KN"><value name="ID"><shadow type="math_number_minmax" id="?D~_T?LvQ}JtQc8on]ZH"><mutation min="0" max="255" label="Id" precision="0"/><field name="SLIDER">1</field></shadow></value></block></statement></block><block type="radio_on_string_drag" id="rfA|fB}ARZ.8kEsWEvnx" x="-3" y="144"><value name="HANDLER_DRAG_PARAM_receivedString"><shadow type="argument_reporter_string" id="^avGXfDf/?vwViP+[MqB"><field name="VALUE">receivedString</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="+-RzD(.tB!J5E8C.B7w*"><field name="VAR" id=",fvi:Q%yO:k@~(1(x#^A">signal</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="radio_received_packet" id=")*8Gd1Dxd+]e7A2!^]v;"><value name="type"><shadow type="radio_packet_property" id="*`e2jM5N/q0SWS5_t4-t"><field name="note">RadioPacketProperty.SignalStrength</field></shadow></value></block></value><next><block type="device_plot_bar_graph" id="0WLW~-DEBG4#pq9~rp.."><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_map" id=",$!|@P(h=CUz4Ql2UaGa"><value name="value"><shadow type="math_number"><field name="NUM">-95</field></shadow><block type="variables_get" id="muC#fRM7r_t6.4ggW?uE"><field name="VAR" id=",fvi:Q%yO:k@~(1(x#^A">signal</field></block></value><value name="fromLow"><shadow type="math_number" id="=XmfOPu[Y}5s;a#Asnvi"><field name="NUM">-95</field></shadow></value><value name="fromHigh"><shadow type="math_number" id="tyWQ@i*gGs5IAq%A^Bts"><field name="NUM">-42</field></shadow></value><value name="toLow"><shadow type="math_number" id="k(:;)+R|[j`KsYPa#;)y"><field name="NUM">0</field></shadow></value><value name="toHigh"><shadow type="math_number" id="-/A^Uc9$=D4SW$H^!R=v"><field name="NUM">9</field></shadow></value></block></value><value name="high"><shadow type="math_number" id="PF=G-M}kNCxLcJjp]9e1"><field name="NUM">9</field></shadow></value></block></next></block></statement></block><block type="device_button_event" id="[^GDLc^Y%v.WDY/%)5l:" x="2" y="402"><field name="NAME">Button.AB</field><statement name="HANDLER"><block type="radio_datagram_send_string" id="5WlLUi1RrMZq%IV+yLKy"><value name="msg"><shadow type="text" id="X8Ri,,4#Gik0qm]H?xi@"><field name="TEXT">bell</field></shadow></value></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id=",fvi:Q%yO:k@~(1(x#^A">signal</variable><variable id="]|Q`tZ8jFhyTuI0wEO%?">ABボタンを同時押しした回数</variable></variables><block type="pxt-on-start" id="wE?SJ.h:W,a;M+=DghgD" x="0" y="0"><statement name="HANDLER"><block type="radio_set_group" id="%$yqj-P%(LCDbE.!O.KN"><value name="ID"><shadow type="math_number_minmax" id="?D~_T?LvQ}JtQc8on]ZH"><mutation min="0" max="255" label="Id" precision="0"/><field name="SLIDER">1</field></shadow></value><next><block type="variables_set" id="a:F*YtGqju|w%GF-/Ebm"><field name="VAR" id="]|Q`tZ8jFhyTuI0wEO%?">ABボタンを同時押しした回数</field><value name="VALUE"><shadow type="math_number" id="cq@^]{Qny!q:]fdLKl*a"><field name="NUM">0</field></shadow></value></block></next></block></statement></block><block type="radio_on_string_drag" id="rfA|fB}ARZ.8kEsWEvnx" x="40" y="230"><value name="HANDLER_DRAG_PARAM_receivedString"><shadow type="argument_reporter_string" id="^avGXfDf/?vwViP+[MqB"><field name="VALUE">receivedString</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="+-RzD(.tB!J5E8C.B7w*"><field name="VAR" id=",fvi:Q%yO:k@~(1(x#^A">signal</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="radio_received_packet" id=")*8Gd1Dxd+]e7A2!^]v;"><value name="type"><shadow type="radio_packet_property" id="*`e2jM5N/q0SWS5_t4-t"><field name="note">RadioPacketProperty.SignalStrength</field></shadow></value></block></value><next><block type="device_plot_bar_graph" id="0WLW~-DEBG4#pq9~rp.."><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_map" id=",$!|@P(h=CUz4Ql2UaGa"><value name="value"><shadow type="math_number"><field name="NUM">-95</field></shadow><block type="variables_get" id="muC#fRM7r_t6.4ggW?uE"><field name="VAR" id=",fvi:Q%yO:k@~(1(x#^A">signal</field></block></value><value name="fromLow"><shadow type="math_number" id="=XmfOPu[Y}5s;a#Asnvi"><field name="NUM">-95</field></shadow></value><value name="fromHigh"><shadow type="math_number" id="tyWQ@i*gGs5IAq%A^Bts"><field name="NUM">-42</field></shadow></value><value name="toLow"><shadow type="math_number" id="k(:;)+R|[j`KsYPa#;)y"><field name="NUM">0</field></shadow></value><value name="toHigh"><shadow type="math_number" id="-/A^Uc9$=D4SW$H^!R=v"><field name="NUM">9</field></shadow></value></block></value><value name="high"><shadow type="math_number" id="PF=G-M}kNCxLcJjp]9e1"><field name="NUM">9</field></shadow></value></block></next></block></statement></block><block type="function_definition" id="suK?5RhrF~5Ai[$AEevW" x="603" y="444"><mutation name="animation" functionid="VnC-tdM/S^GIV2;]|k;j"/><field name="function_name">animation</field><statement name="STACK"><block type="device_show_leds" id="=2jiz8HF)Jg%L+I(HI}F"><field name="LEDS">`
+        # # # . . 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="2gcwj3M}I]g=v3=lc=)."><field name="LEDS">`
+        . # # # . 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="ID0+NbmVtoOgX.W98NfX"><field name="LEDS">`
+        . . # # # 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="+Gb$s7N8C46|cBCA!av1"><field name="LEDS">`
+        . . . # # 
+        . . . . # 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="WRS7L~5ia*|rUr*_)X!$"><field name="LEDS">`
+        . . . . # 
+        . . . # # 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="p0b[At^-ycJ[_69jB_0A"><field name="LEDS">`
+        . . . . . 
+        . . # # # 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="ZLDZUzLO1Zj,UTMz.??#"><field name="LEDS">`
+        . . . . . 
+        . # # # . 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="szU7P]~YGc+z/B`(-/VQ"><field name="LEDS">`
+        . . . . . 
+        # # # . . 
+        . . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="D#fTH38rC`tgl1-*KIiy"><field name="LEDS">`
+        . . . . . 
+        # # . . . 
+        # . . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="Aa=gs_tG3c1Eo+a^O-_g"><field name="LEDS">`
+        . . . . . 
+        # . . . . 
+        # # . . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="%ydEG2[Yj~CeL}uk4yvI"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        # # # . . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="LI9or`,hoDhj,bTJWCew"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . # # # . 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="#:l9TV=ottB_c`$Im]mr"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . # # # 
+        . . . . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="MSJvX14mB1%aj6rzFlM*"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . # # 
+        . . . . # 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="AD6.mx+Ko~OXA$iAt5JH"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . # 
+        . . . # # 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="J){7tjbhlsEV%`SUoUVi"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . # # # 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="5Mh7enx8+SFT[7wxw)g%"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . # # # . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="*dEdZc_to3DcG@$InSkL"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        # # # . . 
+        . . . . .
+        `</field><next><block type="device_show_leds" id="Leean!/.!87Xywo]H+xi"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        # # . . . 
+        # . . . .
+        `</field><next><block type="device_show_leds" id="STvJYOG:di]C+u,IEu81"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        # . . . . 
+        # # . . .
+        `</field><next><block type="device_show_leds" id="0WyIl~9?~CJ0s[xA13g]"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        # # # . .
+        `</field><next><block type="device_show_leds" id="0izXTk!JoxlARl@jBVaW"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . # # # .
+        `</field><next><block type="device_show_leds" id=":2~ezu9R%AA:TaM7V`ep"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . . . . 
+        . . # # #
+        `</field><next><block type="device_clear_display" id="fnGL|0z0exz~pFOjGAG#"><next><block type="basic_show_icon" id="so|ycRVoxc=p=6~,Shvs"><field name="i">IconNames.SmallDiamond</field><next><block type="device_pause" id="fBhcw)k_?zP;II7P5uTJ"><value name="pause"><shadow type="timePicker" id="xOelUva2HwlU[l_W:;U:"><field name="ms">100</field></shadow></value><next><block type="basic_show_icon" id="LiZCDPC/f$+r^f^.nVI]"><field name="i">IconNames.Diamond</field><next><block type="device_pause" id=",$s,Lr]!)I#2yvoAC1.`"><value name="pause"><shadow type="timePicker" id="s1)9PgbHGw{Y}F~1OW,@"><field name="ms">100</field></shadow></value><next><block type="basic_show_icon" id="0|5W}Dzk$~Gc@:mppaZi"><field name="i">IconNames.Chessboard</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="device_button_event" id="[^GDLc^Y%v.WDY/%)5l:" x="4" y="488"><field name="NAME">Button.AB</field><statement name="HANDLER"><block type="variables_change" id="bPnV8`Or=V;y:BbhV^Q^"><field name="VAR" id="]|Q`tZ8jFhyTuI0wEO%?">ABボタンを同時押しした回数</field><value name="VALUE"><shadow type="math_number" id="yJg596/cIU-:9@UuGc{)"><field name="NUM">1</field></shadow></value><next><block type="controls_if" id=":NCWyT=A+EG)TR+r~)af"><value name="IF0"><shadow type="logic_boolean" id="9(*hl.V!sTJ@Vyui)-KG"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="J/8`lQ2[jO9_Q;/Q@Fyx"><field name="OP">GTE</field><value name="A"><shadow type="math_number" id="bqb*v(:JA`c)f|kOSC:j"><field name="NUM">0</field></shadow><block type="variables_get" id="K6j3m=6mM7C.l#(gsQ-^"><field name="VAR" id="]|Q`tZ8jFhyTuI0wEO%?">ABボタンを同時押しした回数</field></block></value><value name="B"><shadow type="math_number" id="rAKoJ*/?Lwk.x.k?{nI9"><field name="NUM">10</field></shadow></value></block></value><statement name="DO0"><block type="controls_if" id="G+n$Nec(GJ+KWpt=L6nU"><value name="IF0"><shadow type="logic_boolean" id="#gAZx1-|-YNS1wk(L8:n"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="dmKsd8yQsZW5[lbY1|]L"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="U`*]!|sNxv27$n;kb`_]"><field name="VAR" id="]|Q`tZ8jFhyTuI0wEO%?">ABボタンを同時押しした回数</field></block></value><value name="B"><shadow type="math_number" id="(N5x=*Kf*%X{!`Z.78#0"><field name="NUM">10</field></shadow></value></block></value><statement name="DO0"><block type="function_call" id="Z:0h(KsJew`s)1DO$YEa"><mutation name="animation" functionid="VnC-tdM/S^GIV2;]|k;j"/></block></statement><next><block type="radio_datagram_send_string" id="5WlLUi1RrMZq%IV+yLKy"><value name="msg"><shadow type="text" id="X8Ri,,4#Gik0qm]H?xi@"><field name="TEXT">bell</field></shadow></value></block></next></block></statement></block></next></block></statement></block></xml>
