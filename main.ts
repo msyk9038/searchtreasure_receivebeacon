@@ -167,12 +167,21 @@ function animation () {
     basic.pause(100)
     basic.showIcon(IconNames.Chessboard)
 }
-input.onButtonPressed(Button.AB, function () {
-    ABボタンを同時押しした回数 += 1
-    if (ABボタンを同時押しした回数 == 10) {
+input.onGesture(Gesture.LogoDown, function () {
+    ロゴを下にした回数 += 1
+    if (ロゴを下にした回数 == 10) {
         animation()
     }
-    if (ABボタンを同時押しした回数 >= 11) {
+    if (ロゴを下にした回数 >= 11) {
+        radio.sendString("bell")
+    }
+})
+input.onButtonPressed(Button.AB, function () {
+    ABボタンを同時押しした回数 += 1
+    if (ABボタンを同時押しした回数 == 100) {
+        animation()
+    }
+    if (ABボタンを同時押しした回数 >= 101) {
         radio.sendString("bell")
     }
 })
@@ -186,6 +195,8 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 let signal = 0
+let ロゴを下にした回数 = 0
 let ABボタンを同時押しした回数 = 0
 radio.setGroup(1)
 ABボタンを同時押しした回数 = 0
+ロゴを下にした回数 = 0
