@@ -197,6 +197,7 @@ radio.onReceivedString(function (receivedString) {
 let signal = 0
 let ロゴを下にした回数 = 0
 let ABボタンを同時押しした回数 = 0
+basic.showIcon(IconNames.Happy)
 radio.setGroup(1)
 ABボタンを同時押しした回数 = 0
 ロゴを下にした回数 = 0
