@@ -1,31 +1,56 @@
+# 宝探しゲーム用のビーコン受信機 (micro:bit)
 
-> Open this page at [https://msyk9038.github.io/searchtreasure_receivebeacon/](https://msyk9038.github.io/searchtreasure_receivebeacon/)
+このプロジェクトは、BBC micro:bitを使用した宝探しゲームのビーコン受信機部分を実装したものです。
 
-## Use as Extension
+## 概要
 
-This repository can be added as an **extension** in MakeCode.
+宝探しゲームで使用するビーコン受信機として機能するmicro:bitプログラムです。送信機から発信される信号を受信し、その強度に応じて宝（送信機）までの距離を視覚的に表示します。
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/msyk9038/searchtreasure_receivebeacon** and import
+## 機能
 
-## Edit this project ![Build status badge](https://github.com/msyk9038/searchtreasure_receivebeacon/workflows/MakeCode/badge.svg)
+- 特定の周波数のビーコン信号を受信
+- 信号強度に基づいた距離の推定
+- LEDディスプレイによる距離の視覚化
+- ボタン操作によるモード切替
+- 宝を発見した際の特殊表示
 
-To edit this repository in MakeCode.
+## 使用方法
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/msyk9038/searchtreasure_receivebeacon** and click import
+1. [MakeCode エディタ](https://makecode.microbit.org/)を開く
+2. 「読み込む」をクリックし、このリポジトリからダウンロードした .hex ファイルを選択
+3. または、「インポート」→「URLから読み込む」を選択し、このリポジトリのURLを入力
+4. micro:bitにダウンロードして使用
+5. 電源を入れると自動的に受信モードになります
+6. 送信機に近づくほどLEDの表示が変化します
 
-## Blocks preview
+## ハードウェア要件
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
+- BBC micro:bit
+- 電源（電池ボックスまたはUSB電源）
 
-![A rendered view of the blocks](https://github.com/msyk9038/searchtreasure_receivebeacon/raw/master/.github/makecode/blocks.png)
+## 関連プロジェクト
 
-#### Metadata (used for search, rendering)
+- [宝探しゲーム用のビーコン送信機](https://github.com/msyk9038/searchtreasure_sendbeacon) - 対となる送信機プログラム
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## ゲームの遊び方
+
+1. 送信機を「宝」として隠します
+2. プレイヤーは受信機を持って宝を探します
+3. 送信機に近づくほど受信機のLEDパターンが変化します
+4. 宝を見つけたらボタンAを押して発見を確認します
+
+## カスタマイズ
+
+コード内の以下の値を変更することで、ゲームの難易度を調整できます：
+
+- 送信周波数
+- 信号強度のしきい値
+- 表示パターン
+
+## ライセンス
+
+MIT
+
+## 作者
+
+msyk9038
